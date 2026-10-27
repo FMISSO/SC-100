@@ -1,1 +1,39 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0f6cbd"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css"><link rel="apple-touch-icon" href="icons/icon-192.png"><title>SC-100 Coach</title></head><body><header><h1>SC-100 Offline Coach</h1><div>Flight Pack ✈️</div></header><main id="app" class="wrap"></main><nav><button onclick="home()">🏠<br>Início</button><button onclick="learn()">📚<br>Aulas</button><button onclick="quiz()">🎯<br>Quiz</button><button onclick="cards()">🧠<br>Cards</button><button onclick="scenario()">🏗️<br>Cenário</button></nav><script src="data.js"></script><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0f6cbd">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="./icon-192.png">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <title>SC-100 Coach</title>
+  <script src="./data.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>SC-100 Offline Coach</h1>
+    <div>Flight Pack ✈️</div>
+    <p id="offline-status" role="status">Preparando uso offline...</p>
+  </header>
+  <div class="wrap">
+    <p id="progress-status" class="notice" role="alert" hidden></p>
+    <noscript><p class="notice">Ative o JavaScript para abrir as aulas e as atividades.</p></noscript>
+    <main id="app" tabindex="-1">
+      <div class="card">
+        <h2>Carregando o conteúdo...</h2>
+        <p>Se esta mensagem continuar aparecendo, conecte-se à internet e recarregue a página para baixar os arquivos do app.</p>
+      </div>
+    </main>
+  </div>
+  <nav aria-label="Seções">
+    <button type="button" data-view="inicio">🏠<br>Início</button>
+    <button type="button" data-view="aulas">📚<br>Aulas</button>
+    <button type="button" data-view="quiz">🎯<br>Quiz</button>
+    <button type="button" data-view="cards">🧠<br>Cards</button>
+    <button type="button" data-view="cenario">🏗️<br>Cenário</button>
+  </nav>
+</body>
+</html>
